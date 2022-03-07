@@ -8,7 +8,7 @@ This is the final project of module 1
 
 ## Live Demo
 
-[Portfolio Live Here](https://hamzaanwar1998.github.io/Capstone-Project/)
+[Project Live Here](https://hamzaanwar1998.github.io/Capstone-Project/)
 
 ## Getting Started
 
