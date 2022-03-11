@@ -1,5 +1,12 @@
 /* google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@font-face {
+    font-family: 'Cocogoose';
+    src: local('COCOGOOSE'), url('https://fonts.cdnfonts.com/s/26936/cocogoose_trial.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 *{
     margin: 0;
@@ -9,7 +16,7 @@
 
 .wrapper{
     width: 100%;
-    max-width: 1440px;
+    /* max-width: 1440px; */
     margin: 0 auto;
     overflow-x: hidden;
     font-family: Lato,sans-serif;
@@ -75,7 +82,7 @@
     height: 100%;
     text-decoration: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     color: #272A31;
@@ -85,7 +92,8 @@
 .navbox .logo-link .logo-text{
     font-size: 18px;
     font-weight: 600;
-    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 5px;
 }
 
 .navbox .items-box{
@@ -200,14 +208,15 @@
     width: 100%;
 
     /* padding: 100px 0; */
-    height: 620px;
+    height: auto;
     background-image: url('./images/bg-mobile.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: repeat;
     background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 50px 0;
 }
 
 .hero-box.about{
@@ -219,14 +228,16 @@
 .hero-box .small-headline{
     font-size: 56px;
     color: #EC5242;
-    font-family: Fredoka, sans-serif;
     margin-left: 40px;
 }
 
 .hero-box .headline{
     font-size: 72px;
-    font-family: 'League Gothic', sans-serif;
-    color: #b70001;
+    font-family: 'Cocogoose', sans-serif;
+    background-image: linear-gradient(90deg, #f40f00, #f25410);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     margin-left: 55px;
     margin-top: 10px;
     letter-spacing: 0.08em;
@@ -243,6 +254,9 @@
     margin-top: 10px;
     color: #47484c;
     line-height: 25px;
+    background-color: #FFF;
+    padding: 15px;
+    width: 650px;
 }
 
 .hero-box .para.about{
@@ -271,6 +285,7 @@
     margin-left: 55px;
     margin-top: 30px;
     font-weight: bolder;
+    font-family: 'Cocogoose',sans-serif;
 }
 
 .hero-box .location{
@@ -292,7 +307,7 @@
         height: auto;
     }
 
-    .hero-box .para.about{
+    .hero-box .para{
         width: 95%;
     }
 
@@ -323,7 +338,11 @@
 
 /* main program */
 .main-program{
-    background-color: #272A31;
+    /* background-color: #272A31; */
+    background-image: url('./images/mainProgramBg.jpg');
+    /* background-blend-mode: overlay; */
+    background-size: cover;
+    background-repeat: no-repeat;
     padding-top: 50px;
     padding-bottom: 70px;
     display: flex;
@@ -481,9 +500,24 @@
 
 .featured-speakers-box .speakers-box .speaker{
     display: flex;
-    width: 500px;
+    width: 520px;
     height: auto;
     margin: 30px;
+    position: relative;
+}
+
+.featured-speakers-box .speakers-box .speaker .check-div{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    z-index: -999;
+}
+
+.featured-speakers-box .speakers-box .speaker .check-div .check-img{
+    width: 100%;
+    height: 100%;
 }
 
 .featured-speakers-box .speakers-box .speaker .left{
@@ -613,7 +647,7 @@
     height: 100%;
     text-decoration: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     color: #272A31;
@@ -626,7 +660,22 @@
 .footer .footer-logo-text{
     font-size: 18px;
     font-weight: 600;
-    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+@media(max-width: 768px){
+    .footer .logo-link{
+        flex-direction: column;
+    }
+
+    .footer .footer-logo-text{
+        font-size: 18px;
+        font-weight: 600;
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
 }
 
 .footer .rights-reserved{

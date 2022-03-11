@@ -24,9 +24,12 @@ document.getElementById('body').onload = () => {
     const speakersBox = document.getElementById('speakers-box');
     speakersBox.innerHTML += `
         <div class="speaker">
+                    <div class="check-div">
+                      <img class="check-img" src="./images/check.png" alt="check"/>
+                    </div>
                     <div class="left">
                         <div class="img">
-                            <img src='${speaker.img}'/>
+                            <img src='${speaker.img}' alt="speaker"/>
                         </div>
                     </div>
                     <div class="right">
